@@ -1,10 +1,5 @@
 
-
-[TOC]
-
 ## Preview
-
-
 
 ![language](https://img.shields.io/badge/Language-Objective--C-8E44AD.svg)
 ![Version](https://img.shields.io/badge/Pod-%20v1.0.0%20-96281B.svg)
