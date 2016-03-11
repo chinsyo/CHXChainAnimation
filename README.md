@@ -9,7 +9,7 @@
 
 ### Screenshot
 
-​	[CHXChainAnimation](./) is a chainable animation library, it's the easiest way to write and read **iOS animation**.
+​	[CHXChainAnimation](/) is a chainable animation library, it's the easiest way to write and read **iOS animation**.
 
 |      Effect      |                Screenshot                |
 | :--------------: | :--------------------------------------: |
