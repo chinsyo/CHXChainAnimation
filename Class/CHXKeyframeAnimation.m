@@ -56,6 +56,7 @@ static NSArray* CreateTransformArrayFrom(NSArray *M11,
 @implementation CHXKeyframeAnimation
 
 + (instancetype)animationWithKeyPath:(NSString *)path {
+    
     CHXKeyframeAnimation *animation = [super animationWithKeyPath:path];
     if (animation) {
         animation.functionBlock = ^double(double t, double b, double c, double d) {
@@ -180,11 +181,11 @@ static NSArray* CreateTransformArrayFrom(NSArray *M11,
 
 static CGPathRef CreatePathFromXYValues(NSArray* xValues, NSArray *yValues) {
 
-    NSInteger numberOfPoints = xValues.count;
+    CGPoint value = CGPointMake([[xValues firstObject] doubleValue], [[yValues firstObject] doubleValue]);
     CGMutablePathRef path = CGPathCreateMutable();
-    CGPoint value;
-    value = CGPointMake([[xValues firstObject] doubleValue], [[yValues firstObject] doubleValue]);
     CGPathMoveToPoint(path, NULL, value.x, value.y);
+    
+    NSInteger numberOfPoints = xValues.count;
     for (NSInteger index = 0; index < numberOfPoints; index++) {
         value = CGPointMake([xValues[index] doubleValue], [yValues[index] doubleValue]);
         CGPathAddLineToPoint(path, NULL, value.x, value.y);
@@ -196,6 +197,7 @@ static NSArray* CreateRectArrayFrom(NSArray *xValues,
                                     NSArray *yValues,
                                     NSArray *widths,
                                     NSArray *heights) {
+    
     NSInteger numberOfRects = xValues.count;
     NSMutableArray *valuesArray = [NSMutableArray arrayWithCapacity:numberOfRects];
     CGRect value;
@@ -216,6 +218,7 @@ static NSArray* CreateColorsArrayFrom(NSArray *redValues,
                                       NSArray *greenValues,
                                       NSArray *blueValues,
                                       NSArray *alphaValues) {
+    
     NSInteger numberOfColors = redValues.count;
     NSMutableArray *values = [NSMutableArray arrayWithCapacity:numberOfColors];
     UIColor *value;
@@ -246,8 +249,10 @@ static NSArray* CreateTransformArrayFrom(NSArray *M11,
                                          NSArray *M42,
                                          NSArray *M43,
                                          NSArray *M44) {
+    
     NSInteger numberOfTransform = M11.count;
     NSMutableArray *valuesArray = [NSMutableArray arrayWithCapacity:numberOfTransform];
+    
     CATransform3D value;
     for (NSInteger index = 1; index < numberOfTransform; index++) {
         value = CATransform3DIdentity;

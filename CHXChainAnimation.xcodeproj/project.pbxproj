@@ -147,10 +147,18 @@
 				D636EC9A1C93026C00DBE2C4 /* UIView+CHXChainAnimationProperty.m */,
 				D636EC9B1C93026C00DBE2C4 /* UIView+CHXChainAnimationTimingFunction.h */,
 				D636EC9C1C93026C00DBE2C4 /* UIView+CHXChainAnimationTimingFunction.m */,
+				D67D73A21C934A0D004D36FE /* NSBKeyframeAnimationFunctions */,
+			);
+			name = Class;
+			sourceTree = "<group>";
+		};
+		D67D73A21C934A0D004D36FE /* NSBKeyframeAnimationFunctions */ = {
+			isa = PBXGroup;
+			children = (
 				D6F3E9AA1C933BC300FF4637 /* NSBKeyframeAnimationFunctions.c */,
 				D6F3E9AB1C933BC300FF4637 /* NSBKeyframeAnimationFunctions.h */,
 			);
-			name = Class;
+			name = NSBKeyframeAnimationFunctions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

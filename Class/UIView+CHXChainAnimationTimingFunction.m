@@ -13,6 +13,8 @@
 #import "CHXKeyframeAnimation.h"
 #import "CHXChainBlock.h"
 
+static NSString *const kCHXChainAnimationKeyAnimationChain = @"AnimationChain";
+
 @implementation UIView (CHXChainAnimationTimingFunction)
 
 - (void)addAnimationKeyframeCalculation:(NSBKeyframeAnimationFunctionBlock) functionBlock {
@@ -316,7 +318,7 @@
     [CATransaction begin];
     [CATransaction setDisableActions:YES];
     [CATransaction setCompletionBlock:^{
-        [self.layer removeAnimationForKey:@"AnimationChain"];
+        [self.layer removeAnimationForKey:kCHXChainAnimationKeyAnimationChain];
         [self chainLinkDidFinishAnimating];
     }];
     
@@ -371,7 +373,7 @@
         [animation calculate];
     }
     group.animations = animationCluster;
-    [self.layer addAnimation:group forKey:@"AnimationChain"];
+    [self.layer addAnimation:group forKey:kCHXChainAnimationKeyAnimationChain];
     
     // For constraints
     NSTimeInterval delay = MAX(group.beginTime - CACurrentMediaTime(), 0.0);
@@ -380,7 +382,7 @@
                             options:0
                          animations:^{
                              [self updateConstraints];
-                         } completion:nil];
+                         } completion:NULL];
 }
 
 - (CHXChainableAnimation)animate {
