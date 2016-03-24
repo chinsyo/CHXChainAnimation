@@ -52,7 +52,7 @@ Say I want to move myView 50 pixels to the right with spring and then change the
     }];
 ```
 
-Thats pretty gross huh... With JHChainableAnimations it is one line of code. 
+Thats pretty gross huh... With CHXChainAnimation it is one line of code. 
 
 ###The New Way 
 
