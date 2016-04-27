@@ -1,3 +1,4 @@
+# CHXChainAnimation
 
 ## Preview
 
@@ -126,7 +127,6 @@ Below is an example of rotating a view around different anchor points
 
 ```objective-c
 view.rotate(180).anchorTopLeft.thenAfter(1.0).rotate(90).anchorCenter.animate(1.0);
-
 // view.rotate(90).anchorTopLeft.anchorCenter == view.rotate(90).anchorCenter
 ```
 
