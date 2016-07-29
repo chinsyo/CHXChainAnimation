@@ -2,7 +2,7 @@
 
 ### Screenshot
 
-​	[CHXChainAnimation](https://github.com/chinsyo/CHXChainAnimation/) is a light weight and powerful chainable animation library, it's the easiest way to write and read **iOS animation**, using like below.
+​	[CHXChainAnimation](https://github.com/chinsyo/CHXChainAnimation/) is a light weight yet powerful chainable animation library, it's the easiest way to write and read **iOS animation**.
 
 ```objective-c
 self.myView.moveX(50).spring.thenAfter(1.0).makeBackground([UIColor purpleColor]).easeIn.animate(0.5);
@@ -16,7 +16,7 @@ self.myView.moveX(50).spring.thenAfter(1.0).makeBackground([UIColor purpleColor]
 
 
 
-##Whats wrong with animations?
+## What's wrong with animations?
 
 CAAnimations and UIView animations are extremely powerful, but it is difficult to chain multiple animations together, especially while changing anchor points. 
 
@@ -24,7 +24,7 @@ Furthermore, complicated animations are difficult to read.
 
 Say I want to move myView 50 pixels to the right with spring and then change the background color with inward easing when the movement has finished:
 
-###The Old Way
+### The Old Way
 
 ```objective-c
     [UIView animateWithDuration:1.0
@@ -47,13 +47,13 @@ Say I want to move myView 50 pixels to the right with spring and then change the
 
 Thats pretty gross huh... With CHXChainAnimation it is one line of code. 
 
-###The New Way 
+### The New Way 
 
 ```objective-c
 self.myView.moveX(50).spring.thenAfter(1.0).makeBackground([UIColor purpleColor]).easeIn.animate(0.5);
 ```
-##Usage
-Either clone the repo and manually add the Files in [CHXChainAnimation](./CHXChainAnimation) or add the following to your Podfile
+## Installation
+Either clone the repo and manually add the Files in [CHXChainAnimation](./CHXChainAnimation) or add the following to your podfile(**Recommend**).
 
 ```
 pod 'CHXChainAnimation', '~> 1.0.0'
@@ -84,7 +84,7 @@ view.makeScale(2.0).moveXY(100, 50).animate(1.0);
 
 A full list of chainable properties can be found [here](#chainables)
 
-###Chaining Animations
+### Chaining Animations
 
 To chain animations seperate the chains with the **thenAfter(t)** function.
 
@@ -93,7 +93,7 @@ Below is an example of how to scale and object for 0.5 seconds, and then move it
 ```objective-c
 view.makeScale(2.0).thenAfter(0.5).moveXY(100, 50).animate(1.0);
 ```
-###Animation Effects
+### Animation Effects
 
 To add an animation effect, call the effect method after the chainable property you want it to apply to.
 
@@ -112,7 +112,7 @@ view.makeScale(2.0).bounce.spring.animate(1.0);
 
 A full list of animation effect properties can be found [here](#effects)
 
-###Anchoring
+### Anchor
 To anchor your view call an achoring method at some point in an animation chain. Like effects, calling one after another in the same chain will cancel the first out. 
 
 Below is an example of rotating a view around different anchor points
@@ -159,7 +159,7 @@ view.makeX(0).animate(1.0).animationCompletion = CHXAnimationCompletion(){
 };
 ```
 
-###Bezier Paths
+### Bezier Path
 You can also animate a view along a [UIBezierPath](https://developer.apple.com/library/ios/documentation/2DDrawing/Conceptual/DrawingPrintingiOS/BezierPaths/BezierPaths.html). To get a bezier path starting from the views position, call the **bezierPathForAnimation** method. Then add points or curves or lines to it and use it in a chainable property.
 
 ```objective-c
@@ -170,7 +170,7 @@ view.moveOnPath(path).animate(1.0);
 ```
 Animation effects do not work on path movements.
 
-###Semantics
+### Semantic
 I included a chainable property called **seconds** that is there purely for show. It does however, make the code a little more readable (if you're into that sort of thing).
 
 ```objective-c
@@ -178,7 +178,7 @@ view.makeScale(2.0).thenAfter(0.5).seconds.moveX(20).animate(1.0);
 // view.makeScale(2.0).thenAfter(0.5).moveX(20).animate(1.0);
 ```
 
-###Transforms
+### Transform
 
 Use the **transform** chainable properties. These are better for views constrained with Autolayout. You should not mix these with other chainable properties 
 
@@ -186,7 +186,7 @@ Use the **transform** chainable properties. These are better for views constrain
 viewWithConstraints.transformX(50).transformScale(2).animate(1.0);
 ```
 
-###Animating Constraints
+### Animating Constraint
 
 Typically frames and autolayout stuff shouldn't mix so use the **makeConstraint** and **moveConstraint** chainable properties with caution (i.e dont try and scale a view when it has a height and width constraint). **These properties should only be used with color, opacity, and corner radius chainable properties** because they dont affect the layers position and therfore won't affect constraints. 
 
@@ -200,7 +200,7 @@ self.myView.makeConstraint(self.topConstraint, 50).animate(1.0);
 ```
 This does not support animation effects yet. 
 
-##Contact Info && Contributing
+## Contact Info && Contributing
 
 Feel free to email me at [chinsyo@sina.cn](mailto:chinsyo@sina.cn?subject=CHXChainAnimation). I'd love to hear your thoughts on this, or see examples where this has been used.
 
