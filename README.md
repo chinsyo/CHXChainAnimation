@@ -2,7 +2,7 @@
 
 ### Screenshot
 
-​	[CHXChainAnimation](https://github.com/chinsyo/CHXChainAnimation/) is a light weight yet powerful chainable animation library, it's the easiest way to write and read **iOS animation**.
+​	[CHXChainAnimation](https://github.com/chinsyo/CHXChainAnimation/) is a light weight yet powerful chainable animation library, it's the easiest way to write **iOS animation**.
 
 ```objective-c
 self.myView.moveX(50).spring.thenAfter(1.0).makeBackground([UIColor purpleColor]).easeIn.animate(0.5);
