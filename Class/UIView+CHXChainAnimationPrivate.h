@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "CHXKeyframeAnimation.h"
-#import "CHXChainBlock.h"
+#import "CHXChainAnimationBlock.h"
 
 typedef void (^CHXAnimationCalculationAction)(UIView *weakSelf);
 typedef void (^CHXAnimationCompletionAction)(UIView *weakSelf);

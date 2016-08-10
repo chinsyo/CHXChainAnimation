@@ -1,5 +1,5 @@
 //
-//  CHXChainBlock.h
+//  CHXChainAnimationBlock.h
 //  CHXChainAnimation
 //
 //  Created by 王晨晓 on 16/3/11.
@@ -8,8 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-#ifndef CHXChainBlock_h
-#define CHXChainBlock_h
+#ifndef CHXChainAnimationBlock_h
+#define CHXChainAnimationBlock_h
+
+typedef void (^CHXAnimationCompletion)();
+#define CHXAnimationCompletion() ^void ()
 
 typedef UIView* (^CHXChainable)();
 #define CHXChainable() ^UIView*()
@@ -43,9 +46,6 @@ typedef UIView* (^CHXChainableLayoutConstraint)(NSLayoutConstraint *constraint, 
 
 typedef UIView* (^CHXChainableBezierPath)(UIBezierPath *path);
 #define CHXChainableBezierPath(path) ^UIView* (UIBezierPath *path)
-
-typedef void (^CHXAnimationCompletion)();
-#define CHXAnimationCompletion() ^void ()
 
 typedef UIView* (^CHXChainableAnimation)(NSTimeInterval duration);
 #define CHXChainableAnimation(duration) ^UIView* (NSTimeInterval duration)

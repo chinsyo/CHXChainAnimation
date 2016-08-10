@@ -9,9 +9,10 @@
 #import "UIView+CHXChainAnimationTimingFunction.h"
 #import "UIView+CHXChainAnimationPrivate.h"
 #import "UIView+CHXChainAnimationProperty.h"
-#import "NSBKeyframeAnimationFunctions.h"
 #import "CHXKeyframeAnimation.h"
-#import "CHXChainBlock.h"
+#import "CHXChainAnimationBlock.h"
+
+#import "NSBKeyframeAnimationFunctions.h"
 
 static NSString *const kCHXChainAnimationKeyAnimationChain = @"AnimationChain";
 
@@ -26,27 +27,27 @@ static NSString *const kCHXChainAnimationKeyAnimationChain = @"AnimationChain";
 }
 
 - (UIView *)easeIn {
-    return self.easeInQuad;
+    return [self easeInQuad];
 }
 
 - (UIView *)easeOut {
-    return self.easeOutQuad;
+    return [self easeOutQuad];
 }
 
 - (UIView *)easeInOut {
-    return self.easeInOutQuad;
+    return [self easeInOutQuad];
 }
 
 - (UIView *)easeBack {
-    return self.easeOutBack;
+    return [self easeOutBack];
 }
 
 - (UIView *)spring {
-    return self.easeOutElastic;
+    return [self easeOutElastic];
 }
 
 - (UIView *)bounce {
-    return self.easeOutBounce;
+    return [self easeOutBounce];
 }
 
 
@@ -410,7 +411,7 @@ static NSString *const kCHXChainAnimationKeyAnimationChain = @"AnimationChain";
     return chainable;
 }
 
-- (void) sanityCheck {
+- (void)sanityCheck {
     NSAssert(self.CHXAnimations.count == self.CHXAnimationGroups.count, @"FATAL ERROR: ANIMATION GROUPS AND ANIMATIONS ARE OUT OF SYNC");
     NSAssert(self.CHXAnimationCalculationActions.count == self.CHXAnimationCompletionActions.count, @"FATAL ERROR: ANIMATION CALCULATION OBJECTS AND ANIMATION COMPLETION OBJECTS ARE OUT OF SYNC");
     NSAssert(self.CHXAnimations.count == self.CHXAnimationCompletionActions.count, @"FATAL ERROR: ANIMATIONS AND ANIMATION COMPLETION OBJECTS  ARE OUT OF SYNC");

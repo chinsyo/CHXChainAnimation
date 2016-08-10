@@ -10,13 +10,9 @@
 #import "UIView+CHXChainAnimationPrivate.h"
 #import "UIView+CHXChainAnimationProperty.h"
 
-CG_INLINE CGFloat DegreesToRadians(double degrees) {
-    return (degrees / 180.0*M_PI);
+CG_INLINE CGFloat degrees_to_radians(double d) {
+    return (d / 180.0*M_PI);
 }
-
-// CG_INLINE CGFloat RadiansToDegrees(double radians) {
-//     return (radians * (180.0/M_PI));
-// }
 
 static NSString *const kCHXAnimationKeyPathPosition = @"position";
 static NSString *const kCHXAnimationKeyPathPositionX = @"position.x";

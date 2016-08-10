@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "CHXChainBlock.h"
+#import "CHXChainAnimationBlock.h"
 
 @interface UIView (CHXChainAnimationTimingFunction)
 

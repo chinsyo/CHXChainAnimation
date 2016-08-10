@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "CHXChainBlock.h"
+#import "CHXChainAnimationBlock.h"
 
 @interface UIView (CHXChainAnimationProperty)
 
@@ -29,6 +29,6 @@
 - (CHXChainableFloat)makeScaleX;
 - (CHXChainableFloat)makeScaleY;
 - (CHXChainablePoint)makeAnchor;
-- (void)makeAnchorFromX:(CGFloat) x Y:(CGFloat)y;
+- (void)makeAnchorFromX:(CGFloat)x Y:(CGFloat)y;
 
 @end

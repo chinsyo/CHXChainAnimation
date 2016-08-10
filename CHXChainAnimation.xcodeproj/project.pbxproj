@@ -47,7 +47,7 @@
 		65128EDA1C92872900AE1F23 /* CHXChainAnimationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CHXChainAnimationTests.m; sourceTree = "<group>"; };
 		65128EDC1C92872900AE1F23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D636EC911C93026C00DBE2C4 /* CHXChainAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CHXChainAnimation.h; path = Class/CHXChainAnimation.h; sourceTree = "<group>"; };
-		D636EC921C93026C00DBE2C4 /* CHXChainBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CHXChainBlock.h; path = Class/CHXChainBlock.h; sourceTree = "<group>"; };
+		D636EC921C93026C00DBE2C4 /* CHXChainAnimationBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CHXChainAnimationBlock.h; path = Class/CHXChainAnimationBlock.h; sourceTree = "<group>"; };
 		D636EC931C93026C00DBE2C4 /* CHXKeyframeAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CHXKeyframeAnimation.h; path = Class/CHXKeyframeAnimation.h; sourceTree = "<group>"; };
 		D636EC941C93026C00DBE2C4 /* CHXKeyframeAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CHXKeyframeAnimation.m; path = Class/CHXKeyframeAnimation.m; sourceTree = "<group>"; };
 		D636EC951C93026C00DBE2C4 /* UIView+CHXChainAnimationAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+CHXChainAnimationAction.h"; path = "Class/UIView+CHXChainAnimationAction.h"; sourceTree = "<group>"; };
@@ -136,9 +136,9 @@
 			isa = PBXGroup;
 			children = (
 				D636EC911C93026C00DBE2C4 /* CHXChainAnimation.h */,
-				D636EC921C93026C00DBE2C4 /* CHXChainBlock.h */,
 				D636EC931C93026C00DBE2C4 /* CHXKeyframeAnimation.h */,
 				D636EC941C93026C00DBE2C4 /* CHXKeyframeAnimation.m */,
+				D636EC921C93026C00DBE2C4 /* CHXChainAnimationBlock.h */,
 				D636EC951C93026C00DBE2C4 /* UIView+CHXChainAnimationAction.h */,
 				D636EC961C93026C00DBE2C4 /* UIView+CHXChainAnimationAction.m */,
 				D636EC971C93026C00DBE2C4 /* UIView+CHXChainAnimationPrivate.h */,
