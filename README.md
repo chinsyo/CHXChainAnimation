@@ -1,6 +1,6 @@
 # CHXChainAnimation
 
-### Screenshot
+## Overview
 
 ​	[CHXChainAnimation](https://github.com/chinsyo/CHXChainAnimation/) is a light weight yet powerful chainable animation library, it's the easiest way to write **iOS animation**.
 
@@ -66,7 +66,7 @@ Then just import the following header.
 
 This is all a UIView category, so these chainables can be used on any UIView in a file where the header is imported.
 
-###Animating
+### Animating
 Chainable properties like **moveX(x)** must come between the view and the **animate(t)** function
 
 Below is an example of how to double an objects size over the course of one second. 
@@ -124,7 +124,7 @@ view.rotate(180).anchorTopLeft.thenAfter(1.0).rotate(90).anchorCenter.animate(1.
 
 A full list of anchor properties can be found [here](#anchors)
 
-###Delays
+### Delays
 To delay an animation call the **wait(t)** or **delay(t)** chainable property.
 
 Below is an example of moving a view after a delay of 0.5 seconds
@@ -133,7 +133,7 @@ Below is an example of moving a view after a delay of 0.5 seconds
 view.moveXY(100, 50).wait(0.5).animate(1.0);
 // The same as view.moveXY(100, 50).delay(0.5).animate(1.0);
 ```
-###Completion
+### Completion
 To run code after an animation finishes set the **animationCompletion** property of your UIView or call the **animateWithCompletion(t, completion)** function.
 
 ```objective-c
@@ -200,7 +200,7 @@ self.myView.makeConstraint(self.topConstraint, 50).animate(1.0);
 ```
 This does not support animation effects yet. 
 
-## Contact Info && Contributing
+## Contact Info & Contributing
 
 Feel free to email me at [chinsyo@sina.cn](mailto:chinsyo@sina.cn?subject=CHXChainAnimation). I'd love to hear your thoughts on this, or see examples where this has been used.
 
